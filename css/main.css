@@ -1,0 +1,35 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.btn-container {
+  margin: auto;
+  background-color: turquoise;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn {
+  min-width: 100px;
+  min-height: 50px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: cornflowerblue;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background-color: orange;
+}
+
+.btn:active {
+  background-color: red;
+}
+
+.btn:disabled {
+  background-color: cadetblue;
+}

@@ -33,11 +33,23 @@ function onStopBtnClick() {
   currentColor = 0;
 }
 
+// version 1
+// function setBgColorOnBody() {
+//   let randomColorIndex = 0;
+//   do {
+//     randomColorIndex = randomIntegerFromInterval(0, colors.length);
+//   } while (randomColorIndex === currentColor);
+//   currentColor = randomColorIndex;
+//   document.body.style.backgroundColor = colors[randomColorIndex];
+// }
+
+// version 2
 function setBgColorOnBody() {
-  let randomColorIndex = 0;
-  do {
-    randomColorIndex = randomIntegerFromInterval(0, colors.length);
-  } while (randomColorIndex === currentColor);
+  let randomColorIndex = randomIntegerFromInterval(0, colors.length);
+  if (randomColorIndex === currentColor) {
+    return setBgColorOnBody();
+  }
+
   currentColor = randomColorIndex;
   document.body.style.backgroundColor = colors[randomColorIndex];
 }
